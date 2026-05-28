@@ -1,0 +1,85 @@
+# ===================================================
+# FLUTTER / DART
+# ===================================================
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+coverage/
+**/doc/api/
+
+# Symbolication & Obfuscation
+app.*.symbols
+app.*.map.json
+
+# ===================================================
+# ANDROID
+# ===================================================
+android/.gradle/
+android/app/build/
+android/app/debug
+android/app/profile
+android/app/release
+android/local.properties
+android/key.properties
+
+# ===================================================
+# iOS
+# ===================================================
+ios/.symlinks/
+ios/Flutter/ephemeral/
+ios/Flutter/Generated.xcconfig
+ios/Pods/
+ios/Runner.xcodeproj/project.xcworkspace/xcuserdata/
+ios/Runner.xcworkspace/xcuserdata/
+
+# ===================================================
+# IDE & EDITOR
+# ===================================================
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+.history
+
+# ===================================================
+# PYTHON / TRAINING ENV
+# ===================================================
+tf_env/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.egg-info/
+dist/
+*.egg
+
+# ===================================================
+# OS & MISCELLANEOUS
+# ===================================================
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.cache
+migrate_working_dir/
+
+# ===================================================
+# SENSITIVE / CONFIG
+# ===================================================
+.env
+*.pem
+*.key
+*.jks
+*.p8
+*.p12
+firebase.json
+**/.firebase/
+google-services.json
+GoogleService-Info.plist

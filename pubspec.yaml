@@ -1,0 +1,29 @@
+name: car_damage_detector
+description: Car damage detection app for thesis
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.19.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  image_picker: ^1.0.7
+  tflite_flutter: ^0.11.0  # ✅ Compatible with Flutter 3.19+
+  path_provider: ^2.1.2
+  provider: ^6.1.1
+  image: ^4.1.7            # ✅ Added: for image processing
+  camera: ^0.10.6  # 🔑 ADD THIS
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/model/car_damage.tflite
