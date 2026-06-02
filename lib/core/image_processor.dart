@@ -4,7 +4,7 @@ import 'package:image/image.dart' as img;
 class ImageProcessor {
   static const int inputSize = 224; // Μέγεθος εισόδου μοντέλου
 
-  /// Επιστρέφει κανονικοποιημένη λίστα [R/255, G/255, B/255, ...] έτοιμη για TFLite.
+  /// Επιστρέφει κανονικοποιημένη λίστα έτοιμη για TFLite.
   static List<double> preprocess(img.Image image) {
     // Αλλαγή μεγέθους σε 224×224 με bilinear interpolation
     final resized = img.copyResize(image, width: inputSize, height: inputSize);
