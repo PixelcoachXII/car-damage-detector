@@ -1,29 +1,33 @@
-name: car_damage_detector
+name: car_damage_detector                     
 description: Car damage detection app for thesis
-publish_to: 'none'
-version: 1.0.0+1
+publish_to: 'none'                            
+version: 1.0.0+1                              
 
+# Περιβάλλον εκτέλεσης: συμβατότητα με εκδόσεις SDK
 environment:
-  sdk: '>=3.0.0 <4.0.0'
-  flutter: '>=3.19.0'
+  sdk: '>=3.0.0 <4.0.0'                       # Dart SDK: 3.x (null safety, performance)
+  flutter: '>=3.19.0'                         # Flutter SDK: 3.19+ (camera plugin compatibility)
 
+# Βασικές εξαρτήσεις παραγωγής
 dependencies:
   flutter:
-    sdk: flutter
-  cupertino_icons: ^1.0.6
-  image_picker: ^1.0.7
-  tflite_flutter: ^0.11.0  # ✅ Compatible with Flutter 3.19+
-  path_provider: ^2.1.2
-  provider: ^6.1.1
-  image: ^4.1.7            # ✅ Added: for image processing
-  camera: ^0.10.6  # 🔑 ADD THIS
+    sdk: flutter                              # Core Flutter framework
+  cupertino_icons: ^1.0.6                     # iOS-style icons για cross-platform UX
+  image_picker: ^1.0.7                        # Επιλογή εικόνας από gallery
+  tflite_flutter: ^0.11.0                     # TFLite interpreter για on-device inference
+  path_provider: ^2.1.2                       # Πρόσβαση σε app documents directory για CSV logging
+  provider: ^6.1.1                            # State management: reactive UI updates
+  image: ^4.1.7                               # Επεξεργασία εικόνας: resize, YUV→RGB, pixel access
+  camera: ^0.10.6                             # Live camera stream: YUV420 frame access
 
+# Εξαρτήσεις ανάπτυξης (testing/linting — δεν συμπεριλαμβάνονται στο production build)
 dev_dependencies:
   flutter_test:
-    sdk: flutter
-  flutter_lints: ^3.0.1
+    sdk: flutter                              # Unit/widget testing framework
+  flutter_lints: ^3.0.1                       # Linting rules για κώδικα ποιότητας
 
+# Ρυθμίσεις Flutter-specific
 flutter:
-  uses-material-design: true
+  uses-material-design: true                  # Ενεργοποίηση Material Design icons/widgets
   assets:
-    - assets/model/car_damage.tflite
+    - assets/model/car_damage.tflite          # TFLite μοντέλο: φορτώνεται από Interpreter.fromAsset()
